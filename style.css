@@ -41,29 +41,17 @@ text-decoration:none;
 }
 
 .hero{
-
 min-height:100vh;
-
 background:
-
 linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.45)),
-
-url("images/screenshot1.png");
-
+url("images/beach.png");
 background-size:cover;
-
 background-position:center;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 text-align:center;
-
 padding:40px;
-
 }
 
 .overlay{
