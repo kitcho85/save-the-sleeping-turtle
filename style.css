@@ -4,118 +4,346 @@
     box-sizing:border-box;
 }
 
-body{
-
-    font-family:Arial, Helvetica, sans-serif;
-
-    background:linear-gradient(#7fd0ff,#dff7ff);
-
-    color:#2b2b2b;
-
-    line-height:1.7;
-
+html{
+    scroll-behavior:smooth;
 }
 
-header{
+body{
 
-    background:#3fb34f;
+    font-family:Arial,Helvetica,sans-serif;
+
+    background:#08374d;
 
     color:white;
 
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.45)),
+    url(images/screenshot1.jpg);
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
     text-align:center;
 
-    padding:60px 20px;
-
-    box-shadow:0 3px 10px rgba(0,0,0,.2);
+    padding:40px;
 
 }
 
-header h1{
-
-    font-size:48px;
-
-    margin-bottom:15px;
-
-}
-
-.subtitle{
-
-    max-width:750px;
-
-    margin:auto;
-
-    font-size:20px;
-
-}
-
-main{
+.overlay{
 
     max-width:900px;
 
-    margin:40px auto;
+}
 
-    padding:0 20px;
+.logo{
+
+    width:500px;
+
+    max-width:95%;
+
+    margin-bottom:30px;
+
+    filter:drop-shadow(0 15px 25px rgba(0,0,0,.5));
+
+}
+
+.hero h1{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:25px;
+
+    opacity:.95;
+
+    margin-bottom:40px;
+
+}
+
+.playButton{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#2ecc71;
+
+    padding:20px 45px;
+
+    border-radius:60px;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.playButton:hover{
+
+    background:#27ae60;
+
+    transform:scale(1.08);
+
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+
+    padding:90px 8%;
+
+}
+
+.container{
+
+    display:flex;
+
+    gap:60px;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+}
+
+.left{
+
+    flex:1;
+
+}
+
+.right{
+
+    flex:1;
+
+    text-align:center;
+
+}
+
+.right img{
+
+    width:100%;
+
+    max-width:330px;
+
+    border-radius:25px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+h2{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:50px;
+
+    color:#ffe16a;
+
+}
+
+.left h2{
+
+    text-align:left;
+
+}
+
+.left p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+/* ================= FEATURES ================= */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:35px;
 
 }
 
 .card{
 
-    background:white;
+    background:#124964;
 
-    border-radius:18px;
+    border-radius:25px;
 
-    padding:30px;
+    padding:35px;
 
-    margin-bottom:25px;
+    text-align:center;
 
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    transition:.3s;
 
-}
-
-.card h2{
-
-    color:#2c9b39;
-
-    margin-bottom:15px;
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
 
 }
 
-.button{
+.card:hover{
 
-    display:inline-block;
+    transform:translateY(-10px);
 
-    background:#45c756;
-
-    color:white;
-
-    text-decoration:none;
-
-    padding:14px 28px;
-
-    border-radius:12px;
-
-    font-weight:bold;
-
-    transition:.25s;
+    background:#19698d;
 
 }
 
-.button:hover{
+.card h3{
 
-    background:#2ea13e;
+    margin:20px 0;
+
+    font-size:28px;
+
+    color:#ffe16a;
+
+}
+
+.card p{
+
+    line-height:1.6;
+
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+.gallery img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    background:#163d51;
+
+    padding:15px;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.gallery img:hover{
 
     transform:scale(1.05);
 
 }
 
+/* ================= FOOTER ================= */
+
 footer{
+
+    background:#041c29;
 
     text-align:center;
 
-    padding:30px;
+    padding:70px 20px;
 
-    color:#666;
+}
 
-    font-size:15px;
+footer h3{
+
+    font-size:32px;
+
+    margin-bottom:15px;
+
+}
+
+footer p{
+
+    margin:10px 0;
+
+    opacity:.9;
+
+}
+
+footer a{
+
+    color:#ffe16a;
+
+    text-decoration:none;
+
+    margin:0 10px;
+
+}
+
+footer a:hover{
+
+    color:white;
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+}
+
+.logo{
+
+width:320px;
+
+}
+
+.left h2{
+
+text-align:center;
+
+}
+
+.container{
+
+flex-direction:column;
+
+}
 
 }
