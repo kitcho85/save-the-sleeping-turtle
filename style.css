@@ -738,3 +738,56 @@ box-shadow:0 0 0 0 rgba(46,204,113,0);
 }
 
 }
+.beeOrbit{
+
+position:absolute;
+
+width:350px;
+
+height:350px;
+
+left:50%;
+
+top:42%;
+
+transform:translate(-50%,-50%);
+
+pointer-events:none;
+
+animation:orbit 10s linear infinite;
+
+z-index:5;
+
+}
+
+.bee{
+
+position:absolute;
+
+width:70px;
+
+left:50%;
+
+top:0;
+
+transform:translateX(-50%);
+
+filter:drop-shadow(0 8px 12px rgba(0,0,0,.35));
+
+}
+
+@keyframes orbit{
+
+0%{
+
+transform:translate(-50%,-50%) rotate(0deg);
+
+}
+
+100%{
+
+transform:translate(-50%,-50%) rotate(360deg);
+
+}
+
+}
