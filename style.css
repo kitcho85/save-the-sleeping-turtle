@@ -828,14 +828,7 @@ animation:beeFly3 6s ease-in-out infinite;
 
 100%{transform:translate(0,0);}
 
-}
-100%{
 
-transform:translate(-50%,-50%) rotate(360deg);
-
-}
-
-}
 .musicButton{
 position:fixed;
 top:20px;
