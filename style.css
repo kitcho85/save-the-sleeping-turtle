@@ -811,7 +811,7 @@ animation:beeFly3 6s ease-in-out infinite;
 75%{transform:translate(-80px,-90px);}
 
 100%{transform:translate(0,0);}
-
+}
 }
 
 @keyframes beeFly3{
