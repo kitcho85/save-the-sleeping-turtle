@@ -201,25 +201,31 @@ margin-top:40px;
 
 .card{
 
-background:#155d7b;
+background:rgba(255,255,255,.08);
 
-padding:35px;
+backdrop-filter:blur(10px);
+
+-webkit-backdrop-filter:blur(10px);
+
+border:1px solid rgba(255,255,255,.15);
 
 border-radius:25px;
 
-text-align:center;
+padding:35px;
 
-transition:.3s;
+transition:.4s;
 
-box-shadow:0 15px 30px rgba(0,0,0,.25);
+box-shadow:0 15px 40px rgba(0,0,0,.25);
 
 }
 
 .card:hover{
 
-transform:translateY(-10px);
+transform:translateY(-15px);
 
-background:#1c7398;
+box-shadow:0 30px 60px rgba(0,0,0,.45);
+
+border-color:#ffe16a;
 
 }
 
