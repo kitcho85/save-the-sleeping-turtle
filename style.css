@@ -307,27 +307,29 @@ padding:25px;
 
 border-radius:25px;
 
-text-align:center;
+transition:.4s;
 
-transition:.3s;
-
-}
-
-.character:hover{
-
-transform:translateY(-8px);
-
-background:#1c7398;
+overflow:hidden;
 
 }
 
 .character img{
 
-width:150px;
+transition:.4s;
 
-margin:auto;
+}
 
-margin-bottom:15px;
+.character:hover{
+
+background:#1d7398;
+
+transform:translateY(-15px);
+
+}
+
+.character:hover img{
+
+transform:scale(1.12) rotate(-4deg);
 
 }
 
