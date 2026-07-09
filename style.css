@@ -541,4 +541,52 @@ font-size:18px;
 }
 
 }
+/* Floating Decorations */
 
+.floating{
+position:absolute;
+font-size:40px;
+pointer-events:none;
+animation:float 4s ease-in-out infinite;
+z-index:3;
+}
+
+.bee1{
+top:90px;
+left:8%;
+animation-delay:0s;
+}
+
+.bee2{
+top:220px;
+right:8%;
+animation-delay:1.5s;
+}
+
+.leaf1{
+bottom:180px;
+left:12%;
+animation-delay:2s;
+}
+
+.star1{
+top:120px;
+right:22%;
+animation-delay:3s;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0) rotate(0deg);
+}
+
+50%{
+transform:translateY(-18px) rotate(8deg);
+}
+
+100%{
+transform:translateY(0) rotate(0deg);
+}
+
+}
