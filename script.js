@@ -1,25 +1,55 @@
-const sections = document.querySelectorAll(
-".about,.features,.screenshots,.characters,.contact,.links"
-);
+const music = document.getElementById("bgMusic");
+const button = document.getElementById("musicBtn");
 
-const observer = new IntersectionObserver((entries)=>{
+music.volume = 0.25;
 
-entries.forEach(entry=>{
+let enabled = localStorage.getItem("music");
 
-if(entry.isIntersecting){
+if(enabled===null){
+enabled="on";
+localStorage.setItem("music","on");
+}
 
-entry.target.classList.add("showSection");
+function updateButton(){
+
+if(localStorage.getItem("music")=="on"){
+
+button.innerHTML="🔊 Sound ON";
+
+}else{
+
+button.innerHTML="🔇 Sound OFF";
 
 }
 
-});
+}
 
-},{
-threshold:0.15
-});
+document.addEventListener("click",()=>{
 
-sections.forEach(section=>{
+if(localStorage.getItem("music")=="on"){
 
-observer.observe(section);
+music.play();
 
-});
+}
+
+},{once:true});
+
+button.onclick=()=>{
+
+if(localStorage.getItem("music")=="on"){
+
+music.pause();
+localStorage.setItem("music","off");
+
+}else{
+
+music.play();
+localStorage.setItem("music","on");
+
+}
+
+updateButton();
+
+};
+
+updateButton();
