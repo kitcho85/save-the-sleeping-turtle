@@ -464,7 +464,15 @@ transform:scale(1.06);
 
 footer{
 
-background:#06293a;
+background:linear-gradient(
+
+180deg,
+
+#06293a,
+
+#041d2b
+
+);
 
 padding:70px 20px;
 
