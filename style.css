@@ -76,9 +76,39 @@ filter:drop-shadow(0 10px 20px rgba(0,0,0,.4));
 
 .hero h1{
 
-font-size:65px;
+font-size:72px;
 
-margin-bottom:15px;
+font-weight:900;
+
+text-shadow:
+
+0 5px 10px rgba(0,0,0,.4),
+
+0 10px 30px rgba(0,0,0,.35);
+
+animation:titleFloat 3s ease-in-out infinite;
+
+}
+
+@keyframes titleFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
 
 }
 
