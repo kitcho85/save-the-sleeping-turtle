@@ -1,55 +1,25 @@
-const music = document.getElementById("bgMusic");
-const button = document.getElementById("musicBtn");
+const sections = document.querySelectorAll(
+".about,.features,.screenshots,.characters,.contact,.links"
+);
 
-music.volume = 0.25;
+const observer = new IntersectionObserver((entries)=>{
 
-let enabled = localStorage.getItem("music");
+entries.forEach(entry=>{
 
-if(enabled===null){
-enabled="on";
-localStorage.setItem("music","on");
-}
+if(entry.isIntersecting){
 
-function updateButton(){
-
-if(localStorage.getItem("music")=="on"){
-
-button.innerHTML="🔊 Sound ON";
-
-}else{
-
-button.innerHTML="🔇 Sound OFF";
+entry.target.classList.add("showSection");
 
 }
 
-}
+});
 
-document.addEventListener("click",()=>{
+},{
+threshold:0.15
+});
 
-if(localStorage.getItem("music")=="on"){
+sections.forEach(section=>{
 
-music.play();
+observer.observe(section);
 
-}
-
-},{once:true});
-
-button.onclick=()=>{
-
-if(localStorage.getItem("music")=="on"){
-
-music.pause();
-localStorage.setItem("music","off");
-
-}else{
-
-music.play();
-localStorage.setItem("music","on");
-
-}
-
-updateButton();
-
-};
-
-updateButton();
+});
