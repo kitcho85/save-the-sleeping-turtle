@@ -16,13 +16,19 @@ scroll-behavior:smooth;
 
 body{
 
-font-family:Arial,Helvetica,sans-serif;
+background:linear-gradient(
 
-background:#0b3f55;
+180deg,
 
-color:white;
+#0b3f55,
 
-overflow-x:hidden;
+#09435f,
+
+#08354b,
+
+#06293a
+
+);
 
 }
 
